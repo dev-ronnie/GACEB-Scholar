@@ -1,0 +1,48 @@
+:root{--bg:#fff;--surface:#fff;--soft:#f6f7fa}
+body{background:var(--bg);color:var(--ink)}
+.site-header,.feature-card,.paper-card,.search-box,.upload-note,.leader-card,.paper-tools select,.tool-card,.q,.faq details{background:var(--surface)}
+.papers-section,.leadership-section,.alt-section{background:var(--soft)}
+.feature-card.featured,.about-mark{background:var(--cream)}
+.themes{display:flex;gap:8px;align-items:center;margin-left:16px}
+.themes button{width:22px;height:22px;border-radius:50%;border:2px solid var(--line);cursor:pointer;padding:0}
+.themes button[aria-pressed=true]{outline:2px solid var(--gold);outline-offset:2px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+[data-theme=emerald]{--navy:#0c3b2e;--blue:#1d7a5b;--cream:#f7faf4;--soft:#f2f7f4}
+[data-theme=crest]{--navy:#4a1521;--blue:#8c2f45;--cream:#fbf6f3;--soft:#f9f4f3}
+[data-theme=night]{--bg:#08122a;--surface:#0f1b38;--soft:#0b1631;--cream:#13223f;--ink:#e9eef8;--muted:#9eabc3;--line:#223253;--blue:#2457a7;color-scheme:dark}
+[data-theme=night] :is(.brand span,.section-heading h2,.papers-intro h2,.about-copy h2,.feature-card h3,.paper-card h3,.values b,.upload-note b,.leader-info h3,.leader-signature,.leader-placeholder b,.menu-toggle,.tool-card h3,.q legend,.faq summary){color:#fff}
+[data-theme=night] :is(nav,.quick-stats span,.search-box input,.paper-tools select){color:#d5dcec}
+[data-theme=night] .nav-cta{background:var(--gold);color:#101b35}
+.section-title{max-width:640px;margin-bottom:28px}
+.section-title h2{font-size:clamp(30px,3.5vw,42px);line-height:1.15;letter-spacing:-1.2px;margin:10px 0;color:var(--navy)}
+[data-theme=night] .section-title h2{color:#fff}
+.section-title p{color:var(--muted);font-size:14px}
+.split{display:grid;grid-template-columns:1.4fr 1fr;gap:20px;align-items:start}
+.tool-card{border:1px solid var(--line);border-radius:8px;padding:22px}
+.tool-card h3{color:var(--navy);font-size:18px;margin-bottom:12px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tabs button,.ghost-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 13px;border-radius:20px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+[data-theme=night] .tabs button[aria-pressed=true]{background:var(--gold);color:#101b35}
+.q{border:1px solid var(--line);border-radius:7px;margin:0 0 12px;padding:14px 16px}
+.q legend{font-weight:700;font-size:14px;color:var(--navy);padding:0 6px}
+.q legend small{color:#a27b11;font-weight:600;margin-left:6px}
+.q label{display:block;padding:7px 4px;font-size:14px;cursor:pointer}
+.q.ok{border-color:#2e9b5f;background:#2e9b5f14}.q.bad{border-color:#cc4b4b;background:#cc4b4b14}
+.exp{font-size:13px;color:var(--muted);margin:8px 0 0}
+#score{margin-top:14px;font-weight:700;color:var(--ink)}
+.bar-row{margin-bottom:14px;font-size:13px}.bar{height:9px;background:var(--line);border-radius:5px;margin-top:5px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--gold)}
+.muted{color:var(--muted);font-size:13px}
+.clock{font-size:54px;font-weight:800;letter-spacing:-2px;color:var(--navy);line-height:1}
+[data-theme=night] .clock{color:var(--gold)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;align-items:center}
+.tool-card input[type=date],.tool-card input[type=text]{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:10px;border-radius:5px;font:inherit}
+.tools-grid,.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.faq details{border:1px solid var(--line);border-radius:7px;padding:14px 18px;margin-bottom:10px;max-width:780px}
+.faq summary{cursor:pointer;font-weight:700;color:var(--navy)}
+.faq p{color:var(--muted);font-size:14px;margin:10px 0 0}
+.disclaimer{font-size:11px;color:#aeb7c9;max-width:720px;margin:0 0 16px}
+@media(max-width:900px){.split,.tools-grid,.who-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.site-header .brand{margin-right:auto}.themes{order:2;margin-right:8px}.menu-toggle{order:3}.themes button{width:26px;height:26px}nav{background:var(--surface)}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}

@@ -270,8 +270,14 @@ async function renderDashboard(){
         <span class="badge-rank">🏅 ${tiers[ti][0]}</span>
       </div>
     </div>
-    <div class="wallet"><small>GACEB COINS</small><div class="amt"><span>🪙 ${coins}</span></div>
-    <small>${nxt?(nxt[1]-coins)+' coins to '+nxt[0]:'Top rank reached'}</small></div>
+    <div class="wallet">
+      <small>GACEB COINS</small>
+      <div class="amt">
+        <span>🪙 ${coins}</span>
+        <a class="plus-btn" href="coins.html#buy" aria-label="Add coins" title="Buy more coins">+</a>
+      </div>
+      <div class="next-tier">${nxt?(nxt[1]-coins)+' coins to '+nxt[0]:'Top rank reached'}</div>
+    </div>
   </div>
   <input type="file" id="avatarFile" accept="image/*" class="hidden">
   <div class="card" style="margin-top:16px"><div class="section-head"><b>Scholar progress</b><small class="muted">${tiers[ti][0]}${nxt?' → '+nxt[0]:''}</small></div><div class="progress"><i style="width:${pct}%"></i></div></div>

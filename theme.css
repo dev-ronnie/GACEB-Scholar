@@ -54,7 +54,7 @@ h1 em{background:var(--grad-gold);-webkit-background-clip:text;background-clip:t
 .online:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#4be39a;margin-right:6px}
 .chat-card .messages{padding:16px}.chat-card .chat-form{padding:0 16px 16px}
 .message.bot{position:relative;padding-left:60px;background:#eef6fb;border:1px solid var(--line);color:var(--ink)}
-.message.bot:before{content:"";position:absolute;left:11px;top:10px;width:38px;height:38px;border-radius:50%;background:url(assets/sr-gauge-portrait.png) center/cover;box-shadow:0 0 0 2px #e6bd62}
+.message.bot:before{content:"";position:absolute;left:11px;top:10px;width:38px;height:38px;border-radius:50%;background:url(sr-gauge-portrait.png) center/cover;box-shadow:0 0 0 2px #e6bd62}
 .message.user{background:var(--grad-brand);color:#fff}
 .typing span{display:inline-block;width:7px;height:7px;margin:0 2px;border-radius:50%;background:var(--blue);animation:dot 1s infinite}.typing span:nth-child(2){animation-delay:.15s}.typing span:nth-child(3){animation-delay:.3s}
 @keyframes dot{50%{transform:translateY(-5px);opacity:.4}}

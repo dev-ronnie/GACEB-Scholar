@@ -10,8 +10,8 @@
   'use strict';
 
   const CONFIG = {
-    SUPABASE_URL: 'PASTE_YOUR_EXISTING_SUPABASE_URL_HERE',
-    SUPABASE_ANON_KEY: 'PASTE_YOUR_EXISTING_SUPABASE_ANON_KEY_HERE',
+    SUPABASE_URL: 'https://wwiedsnmkqjlhxlkfquj.supabase.co',
+    SUPABASE_ANON_KEY: 'sb_publishable_OElqt_dsZWnkLxd-gykvjA_NO4AFJOT',
     AVATAR_BUCKET: 'avatars', // Change only if your existing avatar bucket has another name.
     PDF_BUCKET: 'study-pdfs',
     PREMIUM_WEEKLY_UGX: 10000,

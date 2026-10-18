@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --color-ink: #1c1914;
+  --color-muted: #6e655b;
+  --color-cream: #f4efe6;
+  --color-paper: #fffcf7;
+  --color-line: #e4d9c6;
+  --color-forest: #0e5c43;
+  --color-forest-deep: #08382a;
+  --color-sage: #e5f2eb;
+  --color-gold: #c6a15a;
+  --color-gold-deep: #8a6830;
+  --color-gold-soft: #f8efd8;
+  --color-burgundy: #6e3140;
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-cream);
+    color: var(--color-ink);
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-forest);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    padding: 0.5rem 1.05rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+  }
+  .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .btn-primary {
+    background: var(--color-forest);
+    color: var(--color-paper);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: var(--color-forest-deep);
+  }
+  .btn-gold {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+  .btn-gold:hover:not(:disabled) {
+    background: var(--color-gold-deep);
+    color: var(--color-paper);
+  }
+  .btn-outline {
+    border: 1px solid var(--color-line);
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+  .btn-outline:hover:not(:disabled) {
+    border-color: var(--color-forest);
+    color: var(--color-forest);
+  }
+  .field {
+    width: 100%;
+    min-height: 2.75rem;
+    border-radius: 0.85rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-paper);
+    padding: 0.55rem 0.8rem;
+    font-size: 1rem;
+    color: var(--color-ink);
+  }
+  .field:focus {
+    border-color: var(--color-forest);
+    outline: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

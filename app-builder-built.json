@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Home | GACEB Scholar",
+      "hasCanvas": false,
+      "bodyTextLen": 1205,
+      "bodyTextHash": "5b1ac138a3d35b91aa397a855fd0862c0c48ed186c5f73141fadac758b7a856b",
+      "bodyTextPrefix": "Skip to content GACEB Scholar Log in Home Courses PDF Library Li",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Home | GACEB Scholar",
+      "hasCanvas": false,
+      "bodyTextLen": 1080,
+      "bodyTextHash": "3d9681d2df89d10fe5ec426e58a118931de190c389f9586abaa23a08809ce9dc",
+      "bodyTextPrefix": "Skip to content GACEB Scholar LEARN · GROW · ACHIEVE Your learni",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

@@ -21,12 +21,11 @@
 6. Open the published site and refresh. If old images are cached, clear browser cache or open in a private tab. The site uses relative `assets/...` paths and includes the image files in this ZIP.
 
 ## Connect database and accounts
-1. Create a Supabase project.
+1. Use your existing Supabase project: `https://wwiedsnmkqjlhxlkfquj.supabase.co`. The project URL and publishable key have already been placed in `config.js`.
 2. In Supabase SQL Editor, run all of `supabase-schema.sql` in a new project.
-3. In the Supabase project's API settings, copy the project URL and the **anon/publishable key**.
-4. Edit `config.js` in GitHub and replace `YOUR-PROJECT` and `YOUR-SUPABASE-ANON-KEY` with those two public values. Never put a `service_role` key, payment secret, password or Mobile Money PIN in website files.
-5. In Supabase Authentication URL settings, set the Site URL and allowed redirect URL to the exact published GitHub Pages URL.
-6. Register your account, then use Supabase SQL Editor to promote only your own account to admin:
+3. The project URL and publishable key are already set in `config.js`. Never put a `service_role` key, payment secret, password or Mobile Money PIN in website files.
+4. In Supabase Authentication URL settings, set the Site URL and allowed redirect URL to the exact published website URL.
+5. Register your account, then use Supabase SQL Editor to promote only your own account to admin:
    `update public.profiles set role='admin' where email='YOUR-LOGIN-EMAIL';`
 7. Log in again and visit `dashboard.html` to use moderation and student/referral tables.
 
@@ -41,7 +40,7 @@
 
 
 ## Existing project migration (important)
-If your existing Supabase project already contains accounts, coins, referrals or resources, **do not run the new-project schema over it**. Back up the database first, then review and run `supabase-migration-existing-project.sql` in SQL Editor. It adds fields/tables and replaces resource-upload policies so only an admin can upload. Existing records are not intentionally deleted. Review SQL output before continuing.
+Your provided Supabase project may already contain live data. **Do not run `supabase-schema.sql` or `supabase-migration-existing-project.sql` yet.** First make a database backup and review the current tables, RLS policies, storage buckets, and existing functions. The migration script is included for review only; it may need adjustments to match your current schema. Existing records are not intentionally deleted, but policy/function changes can affect access.
 
 ## Owner-only document uploads
 The upload button is guarded in the interface and Supabase Storage/database policies also restrict uploads to `profiles.role = 'admin'`. Promote only your own account after confirming its email: `update public.profiles set role='admin' where email='YOUR-LOGIN-EMAIL';` Teachers and students must not be given admin role. The resource form supports subject, level, category and type; per-document Free/Coins/Premium publishing controls need to be connected to the new access columns before you enable paid files.
